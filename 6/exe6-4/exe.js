@@ -7,7 +7,7 @@ function populationPercentages(populations) {
     /*On each iteration use the function we created earlier
 (module 3, ex.3.3-declarations vs expressions) for each
 element of the array*/
-//! because we had not work with module 3 so I just push the number as it is for now
+//! because we had not worked with module 3 so I just push the number as it is for now
   }
   return percentage;
 }
