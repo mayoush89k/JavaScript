@@ -20,7 +20,7 @@ console.log("4. people ", people);
 // 5. Write the command to make a copy of the array using a slice. The copy should NOT include "Mary" or "Matt".
 // My Current array is = [ 'Matt', 'Mary', 'Devon', 'May' ]
 let another_people = people;
-another_people = another_people.slice(0, 2);
+another_people = another_people.slice(2);
 console.log("5. people ", people);
 console.log("5. another people ", another_people);
 
@@ -50,4 +50,5 @@ to the people array concatenated with the string of "Bob".*/
 
 const withBob = people;
 withBob.push("Bob"); 
+console.log("9. people:  ", people);
 console.log("9. withBob:  ", withBob);
