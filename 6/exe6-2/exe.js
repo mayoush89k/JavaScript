@@ -50,5 +50,4 @@ to the people array concatenated with the string of "Bob".*/
 
 const withBob = people;
 withBob.push("Bob"); 
-console.log("9. people:  ", people);
 console.log("9. withBob:  ", withBob);
