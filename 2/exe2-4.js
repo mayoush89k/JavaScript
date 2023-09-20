@@ -2,11 +2,10 @@ let currentDate = new Date();
 let dayOfMonth = currentDate.getDate();
 let year = currentDate.getFullYear();
 let month = currentDate.getMonth();
-let NameOfDay = currentDate.getDay();
-let dayOfWeek = "";
+let dayOfWeek = currentDate.getDay();
 
 
-switch (NameOfDay) {
+switch (dayOfWeek) {
   case 0:
     dayOfWeek = "Sunday";
     break;
@@ -75,3 +74,5 @@ console.log("1. Name of Current day: ", dayOfWeek);
 console.log("2. current day of month : ", dayOfMonth);
 console.log("3. current month: ", month);
 console.log("4. current year: ", year);
+
+console.log(`Today is ${dayOfWeek} the ${dayOfMonth} of ${month} ${year}`);
