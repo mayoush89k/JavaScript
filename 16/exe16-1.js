@@ -33,16 +33,6 @@ the invoke reads the latest function definition
 ! d is not defined (error msg) - d is defined in block scope can't be readable out of the block
 undefined - e is defined in block scopes but being defined as var will hoisting it as undefined 
 */
-function funcD1() {
-    d = 1;
-    }
-    funcD1();
-    console.log(d);
-    function funcD2() {
-    var e = 1;
-    }
-    funcD2();
-    console.log(e);
 
 //Block 6
 /*
