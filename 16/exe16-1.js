@@ -7,18 +7,20 @@ undefined - because a is defined as var, so hoisting it as undefined.
 // Block 2
 /*
 'Aurelio De Rosa' - the function invoke, goes to inside the getFullName, that returns fullName under prop
-'Aurelio De Rosa' - the test variable can invoke from function getFullName and returns the full Name
+'John Doe'
 */
 
 //Block 3
 /*
 undefined
-undefined
+number
 
-both of the a and b haven't been defined in global scope
-*/ 
+both are defined inside the function
+but because of b has no definition type, it will be declared as global, so after invoking the var, so it is defined as number
+*/
+   
 
-// Block 4 
+// Block 4
 /*
 "2" 
 "2"
