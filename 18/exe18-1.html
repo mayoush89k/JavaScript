@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,
+        initial-scale=1.0"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Header</h1>
+    <p>Paragraph</p>
+    <a href="#">link</a>
+    <img src="" alt="" />
+    <div class="x">Div with a class</div>
+    <div id="y">Div with an id</div>
+    <input type="text" />
+    <input type="text" />
+    <input type="text" />
+  </body>
+  <script>
+    //your js code here
+    // 1
+    const h1 = document.getElementsByTagName("h1");
+    console.log("h1: ", h1[0]);
+    const a = document.getElementsByTagName("a");
+    console.log("a: ", a[0]);
+    const p = document.getElementsByTagName("p");
+    console.log("p: ", p[0]);
+    const img = document.getElementsByTagName("img");
+    console.log("img: ", img[0]);
+    const x = document.getElementsByClassName("x");
+    console.log("x: ", x[0]);
+    const y = document.getElementById("y");
+    console.log("y: ", y);
+    // 2
+    const h1Selector = document.querySelector("h1");
+    console.log("h1Selector: ", h1Selector);
+    const aSelector = document.querySelector("a");
+    console.log("aSelector: ", aSelector);
+    const pSelector = document.querySelector("p");
+    console.log("pSelector: ", pSelector);
+    const imgSelector = document.querySelector("img");
+    console.log("imgSelector: ", imgSelector);
+    const xSelector = document.querySelector(".x");
+    console.log("xSelector: ", xSelector);
+    const ySelector = document.querySelector("#y");
+    console.log("ySelector: ", ySelector);
+
+    // 3
+    const inputs = document.getElementsByTagName("input");
+    for (input of inputs) {
+      console.log("input: ", input);
+    }
+    const inputsSelector = document.querySelectorAll("input");
+    inputsSelector.forEach((input) => {
+      console.log(`inputsSelector ${input}`);
+    });
+  </script>
+</html>
