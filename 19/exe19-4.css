@@ -1,0 +1,35 @@
+.navigationBar {
+  /* position: fixed; */
+  width: 100%;
+  top: 5%;
+}
+
+.navSection {
+  background-color: steelblue;
+  color: beige;
+  display: inline-block;
+  width: 20%;
+  margin: 0 1%;
+  padding: 1%;
+  text-align: center;
+  font-weight: bold;
+}
+.navSection:hover {
+  background-color: beige;
+  color: steelblue;
+  cursor: pointer;
+}
+.card {
+  border: 1px solid black;
+  background-color: var(--subtitle-background);
+  margin: 10px;
+  padding: 1%;
+  float: left;
+  width: 20%;
+  height: 600px;
+}
+
+.card img {
+  width: 100%;
+  margin: 0;
+}
