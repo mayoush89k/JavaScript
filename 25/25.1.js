@@ -14,3 +14,4 @@ function whoIsStronger(getStrength) {
   } else return "You are stronger";
 }
 console.log(whoIsStronger(hero.getStrength.bind(hero)));
+// to call the function from law level to super level(parent function)
