@@ -1,12 +1,15 @@
-document.getElementById("fetch").addEventListener("click",  async () => {
-    //  fetch("https://icanhazdadjoke.com/")
-    // .then((res) => {
-    //     // console.log(res.joke.json());
-    //     return res.json().joke})
-    // .then((joke) => console.log(joke))
-    // .catch((error) => console.log("error"));
+const body = document.querySelector("body");
+const title = document.querySelector("#title");
+const joke = document.querySelector("#joke");
 
-const response = await fetch("https://icanhazdadjoke.com/");
-var data = await response.json()
-console.log(data);
+document.getElementById("fetch").addEventListener("click", async () => {
+  fetch("https://icanhazdadjoke.com/", {
+    method: "GET",
+    headers: { Accept: "application/json" },
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      title.innerText = `Joke ID is ${data.id}`; // instead of title
+      joke.innerText = data.joke;
+    });
 });
