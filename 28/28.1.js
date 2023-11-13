@@ -2,7 +2,7 @@ const body = document.querySelector("body");
 const title = document.querySelector("#title");
 const joke = document.querySelector("#joke");
 
-document.getElementById("fetch").addEventListener("click", async () => {
+document.getElementById("fetch").addEventListener("click", () => {
   fetch("https://icanhazdadjoke.com/", {
     method: "GET",
     headers: { Accept: "application/json" },
