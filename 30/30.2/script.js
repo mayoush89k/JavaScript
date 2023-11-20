@@ -6,13 +6,15 @@ const yearInput = document.getElementById("year-input");
 const searchBtn = document.getElementById("search-btn");
 const result = document.getElementById("section");
 
+// search button listener to start searching for the movie 
 searchBtn.addEventListener("click", () => {
   fetchMoviesData(input.value , yearInput.value);
   result.classList.remove("hidden");
   result.id = "result";
 });
 
-input.addEventListener("keydown", (e) => {
+// another listener by keydown 'enter' to start searching and showing the movie result
+document.documentElement.addEventListener("keydown", (e) => {
   if (e.key == "Enter") {
     fetchMoviesData(input.value , yearInput.value);
     result.classList.remove("hidden");
@@ -20,6 +22,7 @@ input.addEventListener("keydown", (e) => {
   }
 });
 
+// fetch the url to get the movie data 
 async function fetchMoviesData(input , year) {
   try {
     console.log((`${url}/?${token}&plot=full&t=${input}&y=${year}`));
@@ -34,6 +37,7 @@ async function fetchMoviesData(input , year) {
 }
 const section = document.createElement("section");
 
+// show the result of movie by creating elements and fill them the data of the movie
 function displayMovie(movie) {
   result.innerText = ""; // reset
   section.innerText = ""; // reset
@@ -87,10 +91,11 @@ function displayMovie(movie) {
   }
 }
 
+// rating result and logics by how it is saved in the url
 function generateRatings(ratings) {
   console.log(ratings);
   const stars = [];
-  stars.push({
+  stars.push({ 
     source: ratings[0].Source,
     rating: Math.floor(
       Number(ratings[0].Value.charAt(0) + "." + ratings[0].Value.charAt(2))
