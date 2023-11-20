@@ -1,13 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie app</title>
-</head>
-<body>
-    
+    <style>
+      #header-container {
+        max-width: 30%;
+        margin: 50px auto;
+      }
+      #result {
+        margin: 10px auto;
+        max-width: 80%;
+        padding: 10px;
+        border: solid black 2px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row;
+      }
+      #result img {
+        max-width: 100%;
+        max-height: 100vh;
+      }
+      .hidden {
+        display: none;
+      }
+      #section-details{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section id="header-container">
+      <input type="text" placeholder="Type a movie title" id="search-input" required/>
+      <input type="text" placeholder="Movie release-year" id="year-input" />
+      <button id="search-btn">Search</button>
+    </section>
+    <section id="section" class="hidden"></section>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
